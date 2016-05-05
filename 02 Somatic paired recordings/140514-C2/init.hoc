@@ -1,0 +1,6 @@
+xopen("Passive_GoC_membrane_kinetics_1.hoc")
+xopen("parameters.hoc")
+xopen("biophys.hoc")
+xopen("processes.hoc")
+
+cvode.active(1)

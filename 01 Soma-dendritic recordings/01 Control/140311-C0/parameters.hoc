@@ -1,0 +1,45 @@
+celsius = 23
+
+user_g_pas = 1e-4	// S/cm2
+user_e_pas = 0		// mV
+user_cm = 1			// uF/cm2
+user_Ra = 319		//Ohm*cm
+
+//ndend: # of dendritic compartments
+ndend = 64
+naxon = 85
+
+dend[54].nseg = 67
+
+tstop = 700			// ms
+
+isCVodeAct = 1
+isStim1 = 1
+isStim2 = 0
+
+//IC into the soma and dendrites
+objref stim1, stim2, stim3, stim4
+
+soma stim1 = new IClamp(0.5)
+
+stim1.amp = 0.2		// nA
+stim1.dur = 2		// ms
+stim1.del = 20		// ms
+
+soma stim2 = new IClamp(0.5)
+
+stim2.amp = 0.05	// nA
+stim2.dur = 400		// ms
+stim2.del = 100		// ms
+
+dend[54] stim3 = new IClamp(0.65)
+
+stim3.amp = 0.2		// nA
+stim3.dur = 2		// ms
+stim3.del = 20		// ms
+
+dend[54] stim4 = new IClamp(0.65)
+
+stim4.amp = 0.05	// nA
+stim4.dur = 400		// ms
+stim4.del = 100		// ms

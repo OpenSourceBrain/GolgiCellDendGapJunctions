@@ -1,0 +1,102 @@
+{load_file("nrngui.hoc")}
+objectvar save_window_, rvp_
+objectvar scene_vector_[7]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+{pwman_place(0,0,0)}
+
+//Begin MulRunFitter[0]
+{
+load_file("mulfit.hoc", "MulRunFitter")
+}
+{
+ocbox_ = new MulRunFitter(1)
+}
+{object_push(ocbox_)}
+{
+version(6)
+ranfac = 2
+fspec = new File("auto_fitting.ses.ft1")
+fdat = new File("auto_fitting.ses.fd1")
+read_data()
+build()
+}
+opt.set_optimizer("MulfitPraxWrap")
+{object_push(opt.optimizer)}
+{
+nstep = 6
+}
+{object_pop()}
+{p.gengui(0, 798, 114, 344.7, 523.8)}
+{p.showargs(508, 63, 291.6, 274.5)}
+{optrestore(840, 708, 303.3, 477.9)}
+{object_pop()}
+{
+ocbox_.map("MulRunFitter[0]", 19, 306, 357.3, 231.3)
+}
+objref ocbox_
+//End MulRunFitter[0]
+
+
+//Begin MulRunFitter[1]
+{
+load_file("mulfit.hoc", "MulRunFitter")
+}
+{
+ocbox_ = new MulRunFitter(1)
+}
+{object_push(ocbox_)}
+{
+version(6)
+ranfac = 2
+fspec = new File("auto_fitting.ses.ft2")
+fdat = new File("auto_fitting.ses.fd2")
+read_data()
+build()
+}
+opt.set_optimizer("MulfitPraxWrap")
+{object_push(opt.optimizer)}
+{
+nstep = 6
+}
+{object_pop()}
+{p.gengui(0, 1212, 109, 351, 525.6)}
+{p.showargs(501, 432, 291.6, 274.5)}
+{optrestore(1296, 698, 299.7, 476.1)}
+{object_pop()}
+{
+ocbox_.map("MulRunFitter[1]", 31, 520, 337.5, 214.2)
+}
+objref ocbox_
+//End MulRunFitter[1]
+
+{
+xpanel("RunControl", 0)
+xbutton("Init & Run","run()")
+xbutton("Stop","stoprun=1")
+t = 700.683
+xvalue("t","t", 2 )
+tstop = 700
+xvalue("Tstop","tstop", 1,"tstop_changed()", 0, 1 )
+dt = 1.03069
+xvalue("dt","dt", 1,"setdt()", 0, 1 )
+xpanel(79,79)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,710,-0.1,7.3)
+scene_vector_[6] = save_window_
+{save_window_.view(0, -0.1, 710, 7.4, 1668, 120, 314.1, 237.7)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addexpr("morphology_140624_C0_blue[0].soma_b.v(0.5)", 3, 1, 0.324355, 0.953008, 2)
+save_window_.addexpr("morphology_140624_C0_red[0].soma_r.v(0.5)", 2, 1, 0.344413, 0.941649, 2)
+}
+{
+xpanel("Injection site", 0)
+xbutton("Blue cell","injSoma_b()")
+xbutton("Red cell","injSoma_r()")
+xpanel(7,139)
+}
+objectvar scene_vector_[1]
+{doNotify()}

@@ -1,0 +1,45 @@
+celsius = 23
+gapWeight = 1000
+
+user_Rm_b = 1e4		// Ohm*cm2
+user_Rm_r = 1e4		// Ohm*cm2
+
+user_e_pas = 0		// mV
+user_cm_b = 1		// uF/cm2
+user_cm_r = 1		// uF/cm2
+
+user_Ra_b = 92		//Ohm*cm
+user_Ra_r = 92		//Ohm*cm
+
+tstop = 700			// ms
+
+isCVodeAct = 1
+isStim1 = 1
+isStim2 = 0
+
+//IC into the soma and dendrites
+objref stim1, stim2, stim3, stim4
+
+morphology_140624_C0_blue[0].soma_b stim1 = new IClamp(0.5)
+
+stim1.amp = 0.2		// nA
+stim1.dur = 2		// ms
+stim1.del = 20		// ms
+
+morphology_140624_C0_blue[0].soma_b stim2 = new IClamp(0.5)
+
+stim2.amp = 0.05	// nA
+stim2.dur = 400		// ms
+stim2.del = 100		// ms
+
+morphology_140624_C0_red[0].soma_r stim3 = new IClamp(0.5)
+
+stim3.amp = 0.2		// nA
+stim3.dur = 2		// ms
+stim3.del = 20		// ms
+
+morphology_140624_C0_red[0].soma_r stim4 = new IClamp(0.5)
+
+stim4.amp = 0.05	// nA
+stim4.dur = 400		// ms
+stim4.del = 100		// ms

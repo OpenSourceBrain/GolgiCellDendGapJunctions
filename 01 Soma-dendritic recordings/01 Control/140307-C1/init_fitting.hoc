@@ -1,0 +1,4 @@
+xopen("init.hoc")
+xopen("fitting.ses")
+
+injSoma()

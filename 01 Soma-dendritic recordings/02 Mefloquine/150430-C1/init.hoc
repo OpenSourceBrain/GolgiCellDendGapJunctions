@@ -1,0 +1,11 @@
+load_file("nrngui.hoc")
+
+xopen("morphology_150430-C1.hoc")
+xopen("parameters.hoc")
+xopen("biophys.hoc")
+xopen("processes.hoc")
+
+init()
+
+cvode.active(1)
+cvode.atol(0.0001)

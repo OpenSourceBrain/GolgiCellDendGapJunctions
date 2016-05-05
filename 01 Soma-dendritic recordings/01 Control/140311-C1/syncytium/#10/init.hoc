@@ -1,0 +1,7 @@
+load_file("Passive_GoC_membrane_kinetics.hoc")
+load_file("biophys.hoc")
+load_file("processes.hoc")
+
+init()
+
+cvode.active(1)

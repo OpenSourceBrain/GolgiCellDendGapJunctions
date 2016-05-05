@@ -1,0 +1,12 @@
+ParmFitness: Unnamed multiple run protocol
+	FitnessGenerator: Isoma
+		RegionFitness:	soma.v(0.5)
+
+	FitnessGenerator: Vdend
+		RegionFitness:	dend[33].v(0.722)
+
+	Parameters:
+		"user_g_pas", 0.00045907, 1e-009, 1e+009, 1, 1
+		"user_Ra", 296.99, 1e-009, 1e+009, 1, 1
+		"user_cm", 4.2891, 1e-009, 1e+009, 1, 1
+End ParmFitness

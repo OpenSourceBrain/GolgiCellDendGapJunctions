@@ -1,0 +1,13 @@
+//user defined parameters for the simulations
+
+user_Ra = 200
+user_Cm = 1
+user_Rm = 1e4
+user_e_pas = 0
+
+gapWeight = 1000
+
+forall{
+
+	insert pas
+}

@@ -1,0 +1,59 @@
+xopen("init_fitting.hoc")
+
+
+
+objref Rm_vec, Cm_vec, Ra_vec, Ggj_vec
+objref Inj_soma_error_vec, Vdend_error_vec, summa_inj_soma_error_vec
+
+objref dataMatrix, dataFile
+
+proc auto_fitting(){
+
+	Rm_vec = new Vector()
+	Cm_vec = new Vector()
+	Ra_vec = new Vector()
+	Ggj_vec = new Vector()
+	
+	Inj_soma_error_vec = new Vector()
+	Vdend_error_vec = new Vector()
+	summa_inj_soma_error_vec = new Vector()
+
+	
+	injSoma()
+	MulRunFitter[0].prun()
+	
+	Rm_vec.append(user_Rm)
+	Cm_vec.append(user_Cm)
+	Ra_vec.append(user_Ra)
+	Ggj_vec.append(gapWeight)
+	Inj_soma_error_vec.append(MulRunFitter[0].p.pf.generatorlist.object(0).gen.efun())
+	Vdend_error_vec.append(MulRunFitter[0].p.pf.generatorlist.object(1).gen.efun())
+	summa_inj_soma_error_vec.append(MulRunFitter[0].p.pf.generatorlist.object(0).gen.efun() + MulRunFitter[0].p.pf.generatorlist.object(1).gen.efun())
+	
+
+	dataMatrix = new Matrix()
+	
+	dataMatrix.resize(Rm_vec.size(), 7)
+	dataMatrix.setcol(0, Rm_vec)
+	dataMatrix.setcol(1, Cm_vec)
+	dataMatrix.setcol(2, Ra_vec)
+	dataMatrix.setcol(3, Ggj_vec)
+	dataMatrix.setcol(4, Inj_soma_error_vec)
+	dataMatrix.setcol(5, Vdend_error_vec)
+	dataMatrix.setcol(6, summa_inj_soma_error_vec)
+	
+	dataFile = new File()
+	
+	strdef dataFileName
+	
+	sprint(dataFileName, "FittingResults.dat")
+	dataFile.wopen(dataFileName)
+	dataMatrix.fprint(dataFile, " %g")
+	dataFile.close()
+	
+	print "Finished, data saved"
+}
+
+gapWeight = 1000
+auto_fitting()
+quit()

@@ -1,0 +1,11 @@
+ParmFitness: Unnamed multiple run protocol
+	FitnessGenerator: Inj_blue
+		RegionFitness:	morphology_140610_C0_blue[0].soma_b.v(0.5)
+
+	FitnessGenerator: Att_red
+		RegionFitness:	morphology_140610_C0_red[0].soma_r.v(0.5)
+
+	Parameters:
+		"user_Rm_b", 17779, 1e-009, 1e+009, 1, 1
+		"gapWeight", 1515.6, 1e-009, 10000, 1, 1
+End ParmFitness

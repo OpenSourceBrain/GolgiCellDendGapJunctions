@@ -1,0 +1,173 @@
+xopen("init.hoc")
+xopen("fitting.ses")
+
+injSoma()
+
+start_Rm = 2000
+end_Rm = 16000
+inc_Rm = 1000
+
+start_Ra = 100
+end_Ra = 600
+inc_Ra = 25
+
+start_Cm = 1
+end_Cm = 7
+inc_Cm = 0.5
+
+objref CmVec, RmVec, RaVec, passivePropMatrix, ppmFile, errorVec[2], sumErrorVec, somaV, dendV, timeVec
+
+proc batchRunAndFit(){
+
+	currentTime = startsw()
+
+	CmVec = new Vector()
+	RmVec = new Vector()
+	RaVec = new Vector()
+	
+	for(i=0; i<2; i+=1){
+		errorVec[i] = new Vector()
+	}
+	
+	sumErrorVec = new Vector()
+	
+	nRun = 0
+	
+	for(i=start_Rm; i<=end_Rm; i+=inc_Rm){
+		
+		user_g_pas = 1/i
+		
+		for(user_Ra=start_Ra; user_Ra<=end_Ra; user_Ra+=inc_Ra){
+		
+			for(user_cm=start_Cm; user_cm<=end_Cm; user_cm+=inc_Cm){
+		
+				somaV = new Vector()
+				dendV = new Vector()
+				timeVec = new Vector()
+			
+				somaV.record(&soma.v(0.5))
+				dendV.record(&dend[3].v(0.61))
+				timeVec.record(&t)
+				
+				run()
+				//MulRunFitter[0].prun()
+				print "Cm = ", user_cm, " Rm = ", 1/user_g_pas, " Ra = ", user_Ra
+				
+				//normalizing errors to have equal contributions of somatically and dendritically generated errors
+				nDataPoint = 0
+				steadyState_somaV = 0
+				steadyState_dendV = 0
+				
+				for(j=0; j<timeVec.size(); j+=1){
+					if(timeVec.x[j] > (stim2.del + stim2.dur - 100) && timeVec.x[j] <= (stim2.del + stim2.dur)){
+				
+						steadyState_somaV += somaV.x[j]
+						steadyState_dendV += dendV.x[j]
+						nDataPoint += 1
+					}
+				}
+				
+				steadyState_somaV /= nDataPoint
+				steadyState_dendV /= nDataPoint
+				
+				RaVec.append(user_Ra)
+				RmVec.append(1/user_g_pas)
+				CmVec.append(user_cm)
+				if(isStim1==1 && isStim2 == 0){
+					errorVec[0].append(MulRunFitter[0].p.pf.generatorlist.object[0].gen.efun()/steadyState_somaV)
+					errorVec[1].append(MulRunFitter[0].p.pf.generatorlist.object[1].gen.efun()/steadyState_dendV)
+					sumErrorVec.append(errorVec[0].x[-1] + errorVec[1].x[-1])
+				}
+				if(isStim2==1 && isStim1 == 0){
+					errorVec[0].append(MulRunFitter[0].p.pf.generatorlist.object[2].gen.efun()/steadyState_dendV)
+					errorVec[1].append(MulRunFitter[0].p.pf.generatorlist.object[3].gen.efun()/steadyState_somaV)
+					sumErrorVec.append(errorVec[0].x[-1] + errorVec[1].x[-1])
+				}
+				
+				nRun += 1
+			}
+			
+		}
+		
+	}
+
+	passivePropMatrix = new Matrix()
+	passivePropMatrix.resize(RaVec.size, 6)
+	passivePropMatrix.setcol(0, RaVec)
+	passivePropMatrix.setcol(1, RmVec)
+	passivePropMatrix.setcol(2, CmVec)
+	passivePropMatrix.setcol(3, errorVec[0])
+	passivePropMatrix.setcol(4, errorVec[1])
+	passivePropMatrix.setcol(5, sumErrorVec)
+		
+	ppmFile = new File()
+	
+	strdef ppmFileName
+	
+	if(isStim1==1 && isStim2 == 0){
+		sprint(ppmFileName, "PassiveProperties_S--D.dat")
+		ppmFile.wopen(ppmFileName)
+		passivePropMatrix.fprint(ppmFile, " %g")
+		ppmFile.close()
+	}
+	
+	if(isStim2==1 && isStim1 == 0){
+		sprint(ppmFileName, "PassiveProperties_D--S.dat")
+		ppmFile.wopen(ppmFileName)
+		passivePropMatrix.fprint(ppmFile, " %g")
+		ppmFile.close()
+	}
+	
+	realruntime = startsw() - currentTime
+	
+	print "Finished; # of simulations = ", nRun, "in ", realruntime, "seconds"
+}
+
+proc dual_batchRun(){
+
+	dualStartTime = startsw()
+
+	injSoma()
+	batchRunAndFit()
+	
+	firstNRun = nRun
+	
+	injDend()
+	batchRunAndFit()
+	
+	dualRunTime = startsw() - dualStartTime
+	
+	secondNRun = nRun
+	
+	summaNRun = firstNRun + secondNRun
+	
+	print "Finished; # of simulations = ", summaNRun, "in ", dualRunTime, "seconds"
+}
+
+proc IC_panel(){
+
+	xpanel("Current injection")
+	xlabel("Injection site")
+	xbutton("Soma", "injSoma()")
+	xbutton("Dendrite", "injDend()")
+	xlabel("---Batch run---")
+	xbutton("Batch run", "batchRunAndFit()")
+	xlabel("---Bidirectional batch run---")
+	xbutton("Dual batch run", "dual_batchRun()")
+	xlabel("---Rm (Ohm*cm2)---")
+	xvalue("Start", "start_Rm", 1, "", 0, 0)
+	xvalue("End", "end_Rm", 1, "", 0, 0)
+	xvalue("Increment", "inc_Rm", 1, "", 0, 0)
+	xlabel("---Ra (Ohm*cm)---")
+	xvalue("Start", "start_Ra", 1, "", 0, 0)
+	xvalue("End", "end_Ra", 1, "", 0, 0)
+	xvalue("Increment", "inc_Ra", 1, "", 0, 0)
+	xlabel("---Cm (uF/cm2)---")
+	xvalue("Start", "start_Cm", 1, "", 0, 0)
+	xvalue("End", "end_Cm", 1, "", 0, 0)
+	xvalue("Increment", "inc_Cm", 1, "", 0, 0)
+	xlabel("Attenuation")
+	xbutton("CF", "voltAttCentrifugal()")
+	xbutton("CP", "voltAttCentripetal()")
+	xpanel()
+}

@@ -1,0 +1,52 @@
+
+proc measureMorphology(){
+
+	totalSomaSurf = 0
+	totalDendL = 0
+	totalAxonL = 0
+	totalDendSurf = 0
+	totalAxonSurf = 0
+	totalDendDiam = 0
+	
+	access soma{
+		for(x,0){
+			totalSomaSurf += area(x)
+		}
+	}
+	
+	for(i=0; i<ndend; i+=1){
+		totalDendL += dend[i].L
+	}
+	
+	for(i=0; i<naxon; i+=1){
+		totalAxonL += axon[i].L
+	}
+	
+	for(i=0; i<ndend; i+=1){
+		access dend[i]{	
+			for(x,0){
+				totalDendSurf += area(x)
+				totalDendDiam += diam(x)
+			}
+		}
+	}
+	
+	for(i=0; i<naxon; i+=1){
+		access axon[i]{
+			for(x,0){
+				totalAxonSurf += area(x)
+			}
+		}
+	}
+	
+	print "*************************"
+	print "Morphological description of the GoC"
+	print "*************************"
+	print "Somatic surface: ", totalSomaSurf, "um2"
+	print "Total dendritic length: ", totalDendL, "um"
+	print "Total dendritic surface: ", totalDendSurf, "um2"
+	print "Total dendritic diameter: ", totalDendDiam, "um"
+	print "Total axonal length: ", totalAxonL, "um"
+	print "Total axonal surface: ", totalAxonSurf, "um2"
+	print "*************************"
+}

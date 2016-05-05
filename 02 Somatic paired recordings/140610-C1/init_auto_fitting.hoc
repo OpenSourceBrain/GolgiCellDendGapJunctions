@@ -1,0 +1,116 @@
+xopen("init.hoc")
+xopen("auto_fitting.ses")
+
+/*
+xpanel("Injection site")
+xbutton("Blue cell", "injSoma_b()")
+xbutton("Red cell", "injSoma_r()")
+xpanel()
+*/
+
+
+objref run_cycle_vec
+objref Rm_b_vec, Rm_r_vec, Cm_b_vec, Cm_r_vec, Ra_b_vec, Ra_r_vec, GgjBR_vec, GgjRB_vec
+objref Inj_blue_error_vec, Att_red_error_vec, summa_inj_blue_error_vec, Inj_red_error_vec, Att_blue_error_vec, summa_inj_red_error_vec
+
+objref dataMatrix, dataFile
+
+proc auto_fitting(){
+
+	run_cycle_vec = new Vector()
+
+	Rm_b_vec = new Vector()
+	Rm_r_vec = new Vector()
+	Cm_b_vec = new Vector()
+	Cm_r_vec = new Vector()
+	Ra_b_vec = new Vector()
+	Ra_r_vec = new Vector()
+	GgjBR_vec = new Vector()
+	GgjRB_vec = new Vector()
+	
+	Inj_blue_error_vec = new Vector()
+	Att_red_error_vec = new Vector()
+	summa_inj_blue_error_vec = new Vector()
+	Inj_red_error_vec = new Vector()
+	Att_blue_error_vec = new Vector()
+	summa_inj_red_error_vec = new Vector()
+
+	for(it_count=0; it_count<$1; it_count+=1){
+	
+		injSoma_b()
+		MulRunFitter[0].prun()
+		
+		run_cycle_vec.append(it_count+1)
+		
+		Rm_b_vec.append(user_Rm_b/1000)
+		Cm_b_vec.append(user_cm_b)
+		Ra_b_vec.append(user_Ra_b)
+		GgjBR_vec.append(gapWeight)
+		Inj_blue_error_vec.append(MulRunFitter[0].p.pf.generatorlist.object(0).gen.efun())
+		Att_red_error_vec.append(MulRunFitter[0].p.pf.generatorlist.object(1).gen.efun())
+		summa_inj_blue_error_vec.append(MulRunFitter[0].p.pf.generatorlist.object(0).gen.efun() + MulRunFitter[0].p.pf.generatorlist.object(1).gen.efun())
+		
+		injSoma_r()
+		MulRunFitter[1].prun()
+		
+		Rm_r_vec.append(user_Rm_r/1000)
+		Cm_r_vec.append(user_cm_r)
+		Ra_r_vec.append(user_Ra_r)
+		GgjRB_vec.append(gapWeight)
+		Inj_red_error_vec.append(MulRunFitter[1].p.pf.generatorlist.object(0).gen.efun())
+		Att_blue_error_vec.append(MulRunFitter[1].p.pf.generatorlist.object(1).gen.efun())
+		summa_inj_red_error_vec.append(MulRunFitter[1].p.pf.generatorlist.object(0).gen.efun() + MulRunFitter[1].p.pf.generatorlist.object(1).gen.efun())
+		
+		print (it_count+1), "/", $1, "iterations DONE"
+	}
+	
+	dataMatrix = new Matrix()
+	
+	dataMatrix.resize(run_cycle_vec.size, 15)
+	dataMatrix.setcol(0, run_cycle_vec)
+	dataMatrix.setcol(1, Rm_b_vec)
+	dataMatrix.setcol(2, Cm_b_vec)
+	dataMatrix.setcol(3, Ra_b_vec)
+	dataMatrix.setcol(4, GgjBR_vec)
+	dataMatrix.setcol(5, Inj_blue_error_vec)
+	dataMatrix.setcol(6, Att_red_error_vec)
+	dataMatrix.setcol(7, summa_inj_blue_error_vec)
+	dataMatrix.setcol(8, Rm_r_vec)
+	dataMatrix.setcol(9, Cm_r_vec)
+	dataMatrix.setcol(10, Ra_r_vec)
+	dataMatrix.setcol(11, GgjRB_vec)
+	dataMatrix.setcol(12, Inj_red_error_vec)
+	dataMatrix.setcol(13, Att_blue_error_vec)
+	dataMatrix.setcol(14, summa_inj_red_error_vec)
+	
+	dataFile = new File()
+	
+	strdef dataFileName
+	
+	sprint(dataFileName, "FittingResults.dat")
+	dataFile.wopen(dataFileName)
+	dataMatrix.fprint(dataFile, " %g")
+	dataFile.close()
+	
+	print "Finished, data saved"
+}
+
+objref Ra_range_vec
+
+proc repeated_auto_fitting(){
+
+	Ra_range_vec = new Vector()
+	Ra_range_vec.append(25, 40, 50, 75, 92, 100, 125, 150)
+
+	for(i=0; i<Ra_range_vec.size(); i+=1){
+
+		user_Ra_r = Ra_range_vec.x[i]
+		user_Ra_b = Ra_range_vec.x[i]
+		
+		print "Ra = ", user_Ra_b
+
+		auto_fitting(4)
+	}
+}
+
+//repeated_auto_fitting()

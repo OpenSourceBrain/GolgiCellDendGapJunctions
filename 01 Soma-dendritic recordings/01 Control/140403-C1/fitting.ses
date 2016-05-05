@@ -1,0 +1,51 @@
+{load_file("nrngui.hoc")}
+objectvar save_window_, rvp_
+objectvar scene_vector_[5]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+{pwman_place(0,0,0)}
+
+//Begin MulRunFitter[0]
+{
+load_file("mulfit.hoc", "MulRunFitter")
+}
+{
+ocbox_ = new MulRunFitter(1)
+}
+{object_push(ocbox_)}
+{
+version(6)
+ranfac = 2
+fspec = new File("fitting.ses.ft1")
+fdat = new File("fitting.ses.fd1")
+read_data()
+build()
+}
+opt.set_optimizer("MulfitPraxWrap")
+{object_push(opt.optimizer)}
+{
+nstep = 0
+}
+{object_pop()}
+{p.gengui(0, 1009, 333, 293.4, 334.8)}
+{p.showargs(28, 135, 291.6, 217.8)}
+{optrestore(31, 344, 291.6, 429.3)}
+{object_pop()}
+{
+ocbox_.map("MulRunFitter[0]", 458, 271, 291.6, 250.2)
+}
+objref ocbox_
+//End MulRunFitter[0]
+
+{
+save_window_ = new Graph(0)
+save_window_.size(0,720,-1,71)
+scene_vector_[4] = save_window_
+{save_window_.view(0, -1, 720, 72, 1633, 138, 347.4, 219.7)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addexpr("soma.v(0.5)", 1, 1, 0.8, 0.9, 2)
+save_window_.addexpr("dend[28].v(.985)", 2, 1, 0.8, 0.9, 2)
+}
+objectvar scene_vector_[1]
+{doNotify()}

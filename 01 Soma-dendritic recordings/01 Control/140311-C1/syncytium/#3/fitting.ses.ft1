@@ -1,0 +1,13 @@
+ParmFitness: Unnamed multiple run protocol
+	FitnessGenerator: Isoma
+		RegionFitness:	morphology_140311_C1[0].soma.v(0.5)
+
+	FitnessGenerator: Vdend
+		RegionFitness:	morphology_140311_C1[0].dend_2.v(0.99)
+
+	Parameters:
+		"user_Rm", 20113.6, 1e-009, 1e+009, 1, 1
+		"user_Cm", 1.39, 1e-009, 1e+009, 1, 1
+		"user_Ra", 61.69, 1e-009, 1e+009, 1, 1
+		"gapWeight", 1000, 1e-009, 1e+009, 0, 1
+End ParmFitness
