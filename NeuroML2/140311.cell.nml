@@ -4,10 +4,8 @@
     xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd"
     id = "NeuroML2_file_exported_from_NEURON">
 
-  <notes> NeuroML 2 file generated from ModelView by: NEURON -- Release 7.4 (1370:16a7055d4a86) 2015-11-09
-          Authors: Michael Hines, Sushil Kambampati and Padraig Gleeson,
-          Yale University and UCL 
-  </notes>
+   <include href="pas.channel.nml"/>
+
 
   <cell id="Cell0">
     <notes>Cell: Cell0 exported from NEURON ModelView</notes>
@@ -10609,10 +10607,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2451"/>
         <member segment = "2452"/>
@@ -10667,10 +10665,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2007"/>
         <member segment = "2008"/>
@@ -10718,10 +10716,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1862"/>
         <member segment = "1863"/>
@@ -10781,10 +10779,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="7"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="7"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="7"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1780"/>
         <member segment = "1781"/>
@@ -10877,10 +10875,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1442"/>
         <member segment = "1443"/>
@@ -10906,10 +10904,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "8"/>
         <member segment = "9"/>
@@ -10968,10 +10966,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2511"/>
         <member segment = "2512"/>
@@ -11031,10 +11029,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2048"/>
         <member segment = "2049"/>
@@ -11126,10 +11124,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2032"/>
         <member segment = "2033"/>
@@ -11156,10 +11154,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1939"/>
         <member segment = "1940"/>
@@ -11254,10 +11252,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1706"/>
         <member segment = "1707"/>
@@ -11342,10 +11340,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1457"/>
         <member segment = "1458"/>
@@ -11375,10 +11373,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "204"/>
         <member segment = "205"/>
@@ -11407,10 +11405,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "56"/>
         <member segment = "57"/>
@@ -11432,10 +11430,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2573"/>
         <member segment = "2574"/>
@@ -11466,10 +11464,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2547"/>
         <member segment = "2548"/>
@@ -11506,10 +11504,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2135"/>
         <member segment = "2136"/>
@@ -11672,10 +11670,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="27"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="27"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="27"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1476"/>
         <member segment = "1477"/>
@@ -11727,10 +11725,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "743"/>
         <member segment = "744"/>
@@ -11802,10 +11800,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "67"/>
         <member segment = "68"/>
@@ -11836,10 +11834,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2392"/>
         <member segment = "2393"/>
@@ -11909,10 +11907,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2228"/>
         <member segment = "2229"/>
@@ -12030,10 +12028,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1583"/>
         <member segment = "1584"/>
@@ -12105,10 +12103,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1522"/>
         <member segment = "1523"/>
@@ -12194,10 +12192,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "777"/>
         <member segment = "778"/>
@@ -12229,10 +12227,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "259"/>
         <member segment = "260"/>
@@ -12257,10 +12255,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "224"/>
         <member segment = "225"/>
@@ -12328,10 +12326,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "149"/>
         <member segment = "150"/>
@@ -12384,10 +12382,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "124"/>
         <member segment = "125"/>
@@ -12416,10 +12414,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "87"/>
         <member segment = "88"/>
@@ -12467,10 +12465,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2319"/>
         <member segment = "2320"/>
@@ -12519,10 +12517,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1673"/>
         <member segment = "1674"/>
@@ -12566,10 +12564,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1627"/>
         <member segment = "1628"/>
@@ -12626,10 +12624,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1324"/>
         <member segment = "1325"/>
@@ -12678,10 +12676,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1220"/>
         <member segment = "1221"/>
@@ -12712,10 +12710,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "875"/>
         <member segment = "876"/>
@@ -12748,10 +12746,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="7"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="7"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="7"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "798"/>
         <member segment = "799"/>
@@ -12825,10 +12823,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "684"/>
         <member segment = "685"/>
@@ -12885,10 +12883,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "2337"/>
         <member segment = "2338"/>
@@ -12946,10 +12944,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1430"/>
         <member segment = "1431"/>
@@ -12972,10 +12970,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1362"/>
         <member segment = "1363"/>
@@ -13058,10 +13056,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1240"/>
         <member segment = "1241"/>
@@ -13143,10 +13141,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1178"/>
         <member segment = "1179"/>
@@ -13192,10 +13190,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "897"/>
         <member segment = "898"/>
@@ -13297,10 +13295,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "696"/>
         <member segment = "697"/>
@@ -13359,10 +13357,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "281"/>
         <member segment = "282"/>
@@ -13473,10 +13471,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "367"/>
         <member segment = "368"/>
@@ -13499,10 +13497,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "325"/>
         <member segment = "326"/>
@@ -13555,10 +13553,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1000"/>
         <member segment = "1001"/>
@@ -13604,10 +13602,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "938"/>
         <member segment = "939"/>
@@ -13647,10 +13645,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "514"/>
         <member segment = "515"/>
@@ -13714,10 +13712,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="9"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="9"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="9"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "379"/>
         <member segment = "380"/>
@@ -13863,10 +13861,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1066"/>
         <member segment = "1067"/>
@@ -13920,10 +13918,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1035"/>
         <member segment = "1036"/>
@@ -13965,10 +13963,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "986"/>
         <member segment = "987"/>
@@ -13993,10 +13991,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "967"/>
         <member segment = "968"/>
@@ -14026,10 +14024,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "614"/>
         <member segment = "615"/>
@@ -14065,10 +14063,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "567"/>
         <member segment = "568"/>
@@ -14126,10 +14124,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1139"/>
         <member segment = "1140"/>
@@ -14176,10 +14174,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="5"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "1109"/>
         <member segment = "1110"/>
@@ -14220,10 +14218,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "666"/>
         <member segment = "667"/>
@@ -14283,10 +14281,10 @@
          <notes>This group contains an unbranched set of segments, and all of the segmentGroups marked with
              neuroLexId = sao864921383 form a non-overlapping set of all of the segments.
              These segmentGroups correspond to the 'cables' of NeuroML v1.8.1, and map to/from NEURON sections.</notes>
-        <!-- This is currently inside (old convention) & outside (new convention) the <annotation> element, as some APIs have trouble reading what's inside <annotation> (<xs:any..> in Schema) -->
+        
         <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         <annotation>
-          <property tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
+          <oldproperty tag="numberInternalDivisions" value="3"/> <!-- Discretization of model at time of export from NEURON. Can be overridden by importing application -->
         </annotation>
         <member segment = "643"/>
         <member segment = "644"/>
@@ -14401,14 +14399,27 @@
       </segmentGroup>
 
     </morphology>
-  </cell> 
 
-  <network id="network" type="networkWithTemperature" temperature="23 degC">
-    <population id="Pop_Cell0" component="Cell0" size="1" type="populationList">
-        <instance id="0">
-            <location x="0" y="0" z="0"/>
-        </instance>
-    </population>
-  </network>
+    <!-- Biophysical properties -->
+
+    <biophysicalProperties id="biophys"> 
+
+      <membraneProperties> 
+
+        <channelDensity ionChannel="pas" id="pas_all"  condDensity = "0.1 mS_per_cm2" erev="0.000000mV" ion="non_specific"/>
+
+        <specificCapacitance  value="1 uF_per_cm2" />
+
+      </membraneProperties> 
+
+      <intracellularProperties>
+
+        <resistivity value="0.319 kohm_cm" />
+
+      </intracellularProperties>
+
+    </biophysicalProperties>
+
+  </cell> 
  
 </neuroml>
